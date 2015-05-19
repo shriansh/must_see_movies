@@ -10,17 +10,14 @@
         <div class="row">
           <div class="col-md-12">
             <dl class="dl-horizontal">
-              <dt>Image url</dt>
-              <dd><img src="<%= @director.image_url %>"></dd>
+              <dt> </dt>
+              <dd><img src="<%= @director.image_url %>" class="thumbnail center-block"></dd>
 
-              <dt>Bio</dt>
+              <dt></dt>
               <dd><%= @director.bio %></dd>
 
-              <dt>Dob</dt>
-              <dd><%= @director.dob %></dd>
-
-              <dt>Name</dt>
-              <dd><%= @director.name %></dd>
+              <dt></dt>
+              <dd>Birthday: <%= @director.dob %></dd>
 
             </dl>
             <div class="btn-group btn-group-justified">
@@ -38,6 +35,16 @@
             </div>
           </div>
         </div>
+
+        <ul class="list-group">
+
+
+          <% @director.movies.each do |movie| %>
+            <li class="list-group-item"> <%= movie.title %></li>
+          <% end %>
+
+        </ul>
+
       </div>
     </div>
   </div>
